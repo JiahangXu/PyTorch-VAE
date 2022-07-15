@@ -1,0 +1,58 @@
+# model_params:
+#   name: 'MlpVAE'
+#   in_channels: 5
+#   latent_dim: 128
+
+
+# data_params:
+#   data_path: "/data/data0/jiahang/PyTorch-VAE/data/conv-bn-relu_onnx.csv"
+#   train_batch_size: 64
+#   val_batch_size:  64
+#   patch_size: 64
+#   num_workers: 4
+
+
+# exp_params:
+#   LR: 0.005
+#   weight_decay: 0.0
+#   scheduler_gamma: 0.95
+#   kld_weight: 0.00025
+#   manual_seed: 1265
+
+# trainer_params:
+#   gpus: [1]
+#   max_epochs: 100
+
+# logging_params:
+#   save_dir: "conv_logs/"
+#   name: "MlpVAE"
+
+
+model_params:
+  name: 'MlpVAE'
+  in_channels: 5
+  latent_dim: 128
+
+
+data_params:
+  data_path: "/data/data0/jiahang/PyTorch-VAE/data/dwconv-bn-relu_onnx.csv"
+  train_batch_size: 64
+  val_batch_size:  64
+  patch_size: 64
+  num_workers: 4
+
+
+exp_params:
+  LR: 0.005
+  weight_decay: 0.0
+  scheduler_gamma: 0.95
+  kld_weight: 0.00025
+  manual_seed: 1265
+
+trainer_params:
+  gpus: [1]
+  max_epochs: 200
+
+logging_params:
+  save_dir: "dwconv_logs/"
+  name: "MlpVAE"
